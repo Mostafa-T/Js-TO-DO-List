@@ -1,0 +1,173 @@
+/*
+  TABLE OF CONTENT:-
+  1.0) Google Fonts imports
+  2.0) Default custom Styling
+  3.0) TODO container
+  4.0) TODO list
+  5.0) Error Message
+*/
+ /* 1.0) Google Fonts imports */
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+ /* 2.0) Default custom Styling */
+ * {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+ }
+
+body {
+  height: 1920px;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(-45deg, #ff4545, #fff455);
+  background-repeat: no-repeat;
+  background-size: 100% cover;
+
+}
+h1,h2,h3,h4,h5,h6 {
+  letter-spacing: 2px;
+  font-family: 'Cairo', sans-serif;
+}
+/* 3.0) TODO container */
+.title  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem ;
+  color: #fff;
+}
+.title > img {
+  width: 35px;
+  margin-left:1rem ;
+}
+/* input area */
+.input-area {
+  text-align: center;
+}
+.input-area > form > input {
+  padding: 1.5rem;
+  width: 50%;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.input-area > form > button {
+  position: relative;
+  cursor: pointer;
+  line-height: 5px;
+  margin-left:1rem; padding: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  transition: .3s;
+}
+
+.input-area > button:hover {
+  transform: scale(1.2);
+}
+/* 4.0) TODO list */
+.todo-container {
+  max-width: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 20px ;
+}
+.todo-list  {
+  list-style: none;
+  background-color: transparent;
+}
+/* Todo div */
+.todo-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eeee;
+  margin: 1rem .5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
+}
+.btn-div> button {
+  cursor: pointer;
+  background-color: transparent;
+  line-height: 10px;
+  width: 30px;
+  margin: 0px 5px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50%;
+  font-size: .8rem;
+  transition: .3s;
+}
+.todo-item {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.btn-div > button > i {
+  pointer-events: none;
+}
+.btn-div > button:hover  {
+  color: #ffff;
+  transform: scale(1.3);
+  background-color: #ffbb55;
+}
+.todo-remove .todo-div  {
+  transform: scale(0.2);
+  visibility: hidden;
+  opacity: 0;
+}
+.completed {
+  opacity: .5;
+  text-decoration: line-through;
+}
+.remove {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.todo-filter {
+  text-align: center;
+  margin: 1rem ;
+
+}
+.filter-btn {
+  padding: 1rem;
+  border-radius: 25px;
+}
+.filter-btn > button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0 .5rem;
+  padding: .5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all .3s ease;
+  color: #333;
+}
+.filter-btn > button:hover {
+  color: #333;
+  background-color: #ffff;
+}
+/* 5.0) Error Message */
+.error-message {
+  position: absolute;
+  top: 50px; left: 20px;
+  background: #333;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  transform: scale(0.2);
+  visibility: hidden;
+  transition: .3s;
+
+}
+.error-message-open {
+  transform: scale(1);
+  visibility: visible;
+}
