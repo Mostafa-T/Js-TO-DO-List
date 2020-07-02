@@ -5,6 +5,7 @@ const todoList = document.querySelector('.todo-list');
 const errorMesg = document.querySelector('.error-message');
 const filterBtn = document.querySelector('.filter-btn');
 
+
 // Focus on the todo input 
 todoInput.focus();
 
